@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Details — Alisha Mart</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .product-container { max-width: 1000px; margin: 40px auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+    .product-images img { width: 100%; border-radius:8px; margin-bottom:10px; }
+    .reviews { margin-top:20px; }
+    .review { background:#f4f6f8; padding:10px; border-radius:6px; margin-bottom:10px; }
+  </style>
+</head>
+<body>
+  <header class="topbar container">
+    <div class="brand">
+      <div class="logo">AM</div>
+      <div>
+        <div style="font-weight:700">Alisha Mart</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="product-container">
+    <div class="product-images">
+      <img src="https://picsum.photos/seed/p1/600/400" alt="Wireless Earbuds">
+      <img src="https://picsum.photos/seed/p1b/200/150" alt="Extra view">
+      <img src="https://picsum.photos/seed/p1c/200/150" alt="Extra view">
+    </div>
+    <div class="product-info">
+      <h1>Wireless Earbuds</h1>
+      <p class="price">$39.99</p>
+      <p>Enjoy crystal-clear sound, noise cancellation, and 24-hour battery life with our premium wireless earbuds.</p>
+      <button class="btn">Add to Cart</button>
+
+      <div class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review">⭐️⭐️⭐️⭐️⭐️ "Fantastic quality and great value!"</div>
+        <div class="review">⭐️⭐️⭐️⭐️ "Very comfortable to wear and good sound."</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container" style="text-align:center; margin-top:30px;">
+    <p>&copy; 2025 Alisha Mart. All rights reserved.</p>
+  </footer>
+</body>
+</html>

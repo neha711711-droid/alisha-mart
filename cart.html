@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shopping Cart — Alisha Mart</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .cart-container { max-width: 900px; margin: 40px auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+    table { width:100%; border-collapse: collapse; margin-bottom:20px; }
+    th, td { padding: 12px; border-bottom: 1px solid #ddd; text-align:left; }
+    th { background:#f4f6f8; }
+    .total { text-align:right; font-weight:bold; }
+  </style>
+</head>
+<body>
+  <header class="topbar container">
+    <div class="brand">
+      <div class="logo">AM</div>
+      <div>
+        <div style="font-weight:700">Alisha Mart</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="cart-container">
+    <h1>Your Shopping Cart</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Wireless Earbuds</td>
+          <td>$39.99</td>
+          <td><input type="number" value="1" min="1" style="width:50px"></td>
+          <td>$39.99</td>
+        </tr>
+        <tr>
+          <td>Classic Wristwatch</td>
+          <td>$79.00</td>
+          <td><input type="number" value="1" min="1" style="width:50px"></td>
+          <td>$79.00</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="total">Total: $118.99</p>
+    <a href="checkout.html"><button class="btn">Proceed to Checkout</button></a>
+  </main>
+
+  <footer class="container" style="text-align:center; margin-top:30px;">
+    <p>&copy; 2025 Alisha Mart. All rights reserved.</p>
+  </footer>
+</body>
+</html>

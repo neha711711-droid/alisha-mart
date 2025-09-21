@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Customer Dashboard — Alisha Mart</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .dashboard-container { max-width: 1000px; margin: 40px auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+    .dashboard-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+    .dashboard-header h1 { color:#1a2a44; }
+    .logout-btn { background:#e74c3c; color:#fff; padding:8px 16px; border-radius:6px; text-decoration:none; }
+    .tabs { display:flex; gap:15px; margin-bottom:20px; }
+    .tabs button { flex:1; padding:12px; background:#f4f4f4; border:none; border-radius:6px; cursor:pointer; font-weight:600; }
+    .tabs button.active { background:#ff6600; color:#fff; }
+    .tab-content { display:none; }
+    .tab-content.active { display:block; }
+    .form-group { margin-bottom:15px; }
+    .form-group label { display:block; font-weight:600; margin-bottom:6px; }
+    .form-group input { width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; }
+    .btn { display:inline-block; padding:10px 20px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer; text-decoration:none; }
+    table { width:100%; border-collapse:collapse; margin-top:15px; }
+    th, td { padding:12px; border-bottom:1px solid #ddd; text-align:center; }
+    th { background:#f4f4f4; }
+  </style>
+</head>
+<body>
+  <header class="topbar container">
+    <div class="brand">
+      <div class="logo">AM</div>
+      <div><div style="font-weight:700">Alisha Mart</div></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dashboard-container">
+    <div class="dashboard-header">
+      <h1>My Dashboard</h1>
+      <a href="account.html" class="logout-btn">Logout</a>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-link active" data-tab="profile">Profile</button>
+      <button class="tab-link" data-tab="orders">Orders</button>
+      <button class="tab-link" data-tab="addresses">Addresses</button>
+      <button class="tab-link" data-tab="wishlist">Wishlist</button>
+    </div>
+
+    <div id="profile" class="tab-content active">
+      <h2>Profile Information</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" value="John Doe">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" value="john@example.com">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" value="+1234567890">
+        </div>
+        <button type="submit" class="btn">Save Changes</button>
+      </form>
+    </div>
+
+    <div id="orders" class="tab-content">
+      <h2>Order History</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Date</th>
+            <th>Total</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#1001</td>
+            <td>Sept 15, 2025</td>
+            <td>$120.00</td>
+            <td>Delivered</td>
+          </tr>
+          <tr>
+            <td>#1002</td>
+            <td>Sept 18, 2025</td>
+            <td>$85.50</td>
+            <td>Pending</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="addresses" class="tab-content">
+      <h2>Saved Addresses</h2>
+      <p><strong>Default Address:</strong> 123 Main Street, City, Country</p>
+      <p><strong>Work Address:</strong> Office 45, Business Center</p>
+      <button class="btn">Add New Address</button>
+    </div>
+
+    <div id="wishlist" class="tab-content">
+      <h2>My Wishlist</h2>
+      <p>View all your saved products here.</p>
+      <a href="wishlist.html" class="btn">Go to Wishlist</a>
+    </div>
+  </main>
+
+  <footer class="container" style="text-align:center; margin-top:30px;">
+    <p>&copy; 2025 Alisha Mart. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        tabLinks.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(tab => tab.classList.remove('active'));
+
+        link.classList.add('active');
+        document.getElementById(link.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
